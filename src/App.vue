@@ -1,5 +1,7 @@
 <template>
-  <div id="app" />
+  <div id="app">
+    test
+  </div>
 </template>
 
 <script>
@@ -10,5 +12,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+  #app {
+    color: red;
+  }
 </style>
