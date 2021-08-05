@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    test
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit blanditiis possimus quia voluptas deserunt minus dignissimos. Laboriosam animi nemo officiis, culpa unde sapiente doloribus pariatur, nobis, omnis voluptates explicabo debitis.
   </div>
 </template>
 
@@ -13,7 +13,5 @@ export default {
 </script>
 
 <style lang="scss">
-  #app {
-    color: red;
-  }
+  #app {}
 </style>
