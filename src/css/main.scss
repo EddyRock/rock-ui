@@ -1,4 +1,16 @@
 @import "../assets/fonts/fonts.scss";
+
 * {
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif !important;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
