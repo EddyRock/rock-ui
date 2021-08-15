@@ -21,15 +21,36 @@
         </div>
       </div>
 
+      <rock-input
+        v-model="field"
+        class="main__input"
+        small
+      />
+
+      <rock-input
+        v-model="field"
+        class="main__input"
+        medium
+      />
+
+      <rock-input
+        v-model="field"
+        class="main__input"
+        large
+      />
+      {{ field }}
     </div>
   </div>
 </template>
 
 <script>
+import RockInput from './components/RockInput.vue';
 
 export default {
   name: 'App',
-  components: {},
+  components: {
+    RockInput,
+  },
   data: () => ({
     colors: [
       {
@@ -93,6 +114,7 @@ export default {
         class: 'violet',
       },
     ],
+    field: '',
   }),
 };
 </script>
@@ -108,7 +130,6 @@ export default {
       width: 100%;
       max-width: 91rem;
       margin: auto;
-      height: 100vh;
       background-color: $white;
     }
 
@@ -129,7 +150,12 @@ export default {
       max-width: 250px;
       margin-top: 1rem;
     }
-    
+
+    &__input {
+      margin-top: 16px;
+      max-width: 250px;
+    }
+
     &__color {
       &-item {
         border-radius: 50%;
@@ -171,6 +197,7 @@ export default {
       &-hex {
         color: $dark_gray;
       }
+
       &-description {
         display: flex;
         flex-direction: column;
