@@ -129,7 +129,7 @@ export default {
       max-width: 250px;
       margin-top: 1rem;
     }
-    // TODO: Finis define color by background
+    
     &__color {
       &-item {
         border-radius: 50%;
@@ -154,11 +154,12 @@ export default {
         @each $name, $color in $colors {
           &--#{$name} {
             background-color: $color;
-            color: $white;
+            color: white;
+            @if $color == $medium_gray or $color == $light_gray or $color == $yellow or $color == $violet {
+              color: $black;
+            }
           }
         }
-        // white - black, dark-grey, orange, success, blue-link, danger
-        // black - medium-grey, light-grey, yellow, violet
       }
 
       &-subtitle {
