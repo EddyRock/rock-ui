@@ -28,8 +28,8 @@
         }"
         :placeholder="placeholder"
         :disabled="disabled"
+        :type="type"
         class="rock-input__field"
-        type="text"
         @keyup="onKeyEvent"
         @input="onInput"
         @change="onChange"
@@ -111,8 +111,8 @@ export default {
 
         this.timeout = setTimeout(() => {
           this.isLayoutVisible = false;
+          clearTimeout(this.timeout);
         }, 50);
-        clearTimeout(this.timeout);
       }
     },
 
@@ -132,6 +132,11 @@ export default {
 .rock-input {
   display: flex;
   flex-direction: column;
+
+  &__subtitle {
+    margin-bottom: .5rem;
+  }
+
   &__field {
     width: 100%;
     padding: .6rem .5rem;
@@ -144,19 +149,20 @@ export default {
     &-layout {
       position: absolute;
       width: 100%;
-      height: 2.3rem;
+      height: 2.35rem;
       background-color: $blue_link;
       opacity: .3;
+      border-radius: .1rem;
       &--small {
-        height: 1.8rem;
+        height: 1.95rem;
       }
 
       &--medium {
-        height: 2.8rem;
+        height: 2.85rem;
       }
 
       &--large {
-        height: 3.2rem;
+        height: 3.25rem;
       }
     }
 
