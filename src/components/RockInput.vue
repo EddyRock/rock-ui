@@ -7,15 +7,6 @@
       {{ subtitle }}
     </span>
     <div class="rock-input__field-wrapper">
-      <div
-        v-if="isLayoutVisible"
-        class="rock-input__field-layout"
-        :class="{
-          'rock-input__field-layout--small': small,
-          'rock-input__field-layout--medium': medium,
-          'rock-input__field-layout--large': large,
-        }"
-      />
       <input
         v-model="field"
         :class="{
@@ -30,7 +21,6 @@
         :disabled="disabled"
         :type="type"
         class="rock-input__field"
-        @keyup="onKeyEvent"
         @input="onInput"
         @change="onChange"
       >
@@ -100,22 +90,9 @@ export default {
   },
   data: () => ({
     field: '',
-    isLayoutVisible: false,
-    timeout: null,
   }),
 
   methods: {
-    onKeyEvent(e) {
-      if (e.key === 'Backspace' && !this.field) {
-        this.isLayoutVisible = true;
-
-        this.timeout = setTimeout(() => {
-          this.isLayoutVisible = false;
-          clearTimeout(this.timeout);
-        }, 50);
-      }
-    },
-
     onInput() {
       this.$emit('input', this.field);
     },
@@ -123,7 +100,6 @@ export default {
     onChange() {
       this.$emit('change', this.field);
     },
-
   },
 };
 </script>
@@ -144,26 +120,6 @@ export default {
     border-radius: .1rem;
     &-wrapper {
       position: relative;
-    }
-
-    &-layout {
-      position: absolute;
-      width: 100%;
-      height: 2.35rem;
-      background-color: $blue_link;
-      opacity: .3;
-      border-radius: .1rem;
-      &--small {
-        height: 1.95rem;
-      }
-
-      &--medium {
-        height: 2.85rem;
-      }
-
-      &--large {
-        height: 3.25rem;
-      }
     }
 
     &--small {
@@ -198,6 +154,7 @@ export default {
       outline: none;
       border-color: $blue_link;
     }
+
     &::placeholder {
       color: $dark_gray;
     }

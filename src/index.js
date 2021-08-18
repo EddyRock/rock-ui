@@ -1,6 +1,9 @@
 import Vue from 'vue';
+import RockInput from './components/RockInput.vue';
 
-const Componetns = {};
+const Componetns = {
+  RockInput,
+};
 
 Object.keys(Componetns).forEach((name) => {
   Vue.component(name, Componetns[name]);

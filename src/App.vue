@@ -14,7 +14,14 @@
         </div>
       </div>
 
-      <div class="main__inputs">
+      <rock-text-area class="main__textarea" />
+      <rock-input
+        v-model="field"
+        :subtitle="'asdasd'"
+        class="main__input"
+      />
+
+      <div class="main__inputs" v-if="false">
         <h4 class="main__input-title">Small</h4>
         <rock-input v-model="field" class="main__input" small />
 
@@ -52,11 +59,13 @@
 
 <script>
 import RockInput from './components/RockInput.vue';
+import RockTextArea from './components/RockTextArea.vue';
 
 export default {
   name: 'App',
   components: {
     RockInput,
+    RockTextArea,
   },
   data: () => ({
     colors: [
@@ -162,6 +171,18 @@ export default {
   }
 
   &__input {
+    margin-top: 16px;
+    max-width: 250px;
+
+    &-title {
+      padding-top: 2rem;
+      margin-top: 1rem;
+      padding: 0;
+      font-weight: 700;
+    }
+  }
+
+  &__textarea {
     margin-top: 16px;
     max-width: 250px;
 
