@@ -49,7 +49,11 @@ export default {
     },
     error: {
       type: String,
-      default: 'asdasd',
+      default: '',
+    },
+    warning: {
+      type: Boolean,
+      default: false,
     },
   },
   data: () => ({
