@@ -43,30 +43,13 @@
 </template>
 
 <script>
+//TODO: Remove rock-input__field-wrapper + add some docs + add App layout
+import Events from '../mixins/Events.vue';
+
 export default {
   name: 'RockInput',
-  components: {},
+  mixins: [Events],
   props: {
-    warning: {
-      type: Boolean,
-      default: false,
-    },
-    error: {
-      type: String,
-      default: '',
-    },
-    subtitle: {
-      type: String,
-      default: '',
-    },
-    placeholder: {
-      type: String,
-      default: '',
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
     small: {
       type: Boolean,
       default: false,
@@ -88,19 +71,6 @@ export default {
       default: '',
     },
   },
-  data: () => ({
-    field: '',
-  }),
-
-  methods: {
-    onInput() {
-      this.$emit('input', this.field);
-    },
-
-    onChange() {
-      this.$emit('change', this.field);
-    },
-  },
 };
 </script>
 
@@ -110,14 +80,32 @@ export default {
   flex-direction: column;
 
   &__subtitle {
-    margin-bottom: .5rem;
+    @extend %subtitle_default;
   }
 
   &__field {
-    width: 100%;
-    padding: .6rem .5rem;
-    border: .1rem solid $medium_gray;
-    border-radius: .1rem;
+    &--error {
+      @extend %error_default;
+    }
+
+    &--warning {
+      @extend %warning_default;
+    }
+
+    &--disabled {
+      @extend %disabled_default;
+    }
+
+    &:focus {
+        @extend %focus_default;
+    }
+
+    &::placeholder {
+      color: $dark_gray;
+    }
+
+    @extend %field_default;
+
     &-wrapper {
       position: relative;
     }
@@ -136,38 +124,15 @@ export default {
       padding: .8rem .7rem;
       font-size: 1.3rem;
     }
-
-    &--error {
-      border-color: $danger;
-    }
-
-    &--warning {
-      border-color: $orange;
-    }
-
-    &--disabled {
-      opacity: .5;
-      cursor: not-allowed;
-    }
-
-    &:focus {
-      outline: none;
-      border-color: $blue_link;
-    }
-
-    &::placeholder {
-      color: $dark_gray;
-    }
   }
 
   &__error {
-    color: $danger;
-    margin-top: .5rem;
+    @extend %invalid;
   }
 
   &__tip {
     color: $medium_gray;
-    margin-top: .5rem;
+    margin-top: $margin_step;
     font-size: .8rem;
   }
 }

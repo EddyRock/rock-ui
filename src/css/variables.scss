@@ -1,0 +1,49 @@
+@import './colors.scss';
+
+//Margin variables
+$margin_step: .5rem;
+
+//Padding variables
+$padding_inner: .6rem .5rem;
+
+//Border variables
+$border_weight: .1rem;
+$border_radius: .1rem;
+
+// Opacity variables
+$disabled_opacity: .5;
+
+//Placeholder Selectors
+%field_default {
+	width: 100%;
+  padding: $padding_inner;
+  border: $border_weight solid $medium_gray;
+	border-radius: $border_radius;
+}
+
+%subtitle_default {
+	margin-bottom: $margin_step;
+}
+
+%focus_default {
+	outline: none;
+  border-color: $blue_link;
+}
+
+%disabled_default {
+	opacity: $disabled_opacity;
+  cursor: not-allowed;
+}
+
+%warning_default {
+	border-color: $orange;
+}
+
+%error_default {
+	border-color: $danger;
+}
+
+%invalid {
+  color: $danger;
+  margin-top: $margin_step;
+}

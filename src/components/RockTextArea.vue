@@ -31,88 +31,48 @@
 </template>
 
 <script>
+import Events from '../mixins/Events.vue';
+
 export default {
   name: 'RockTextArea',
-  components: {},
-  props: {
-    subtitle: {
-      type: String,
-      default: '',
-    },
-    placeholder: {
-      type: String,
-      default: '',
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    error: {
-      type: String,
-      default: '',
-    },
-    warning: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  data: () => ({
-    field: '',
-  }),
-
-  methods: {
-    onInput() {
-      this.$emit('input', this.field);
-    },
-
-    onChange() {
-      this.$emit('change', this.field);
-    },
-  },
+  mixins: [Events],
 };
 </script>
 
 <style lang="scss">
-//TODO: make a mixin + add to vraibles some css
-
 .rock-text-area {
   display: flex;
   flex-direction: column;
 
   &__subtitle {
-    margin-bottom: .5rem;
+    @extend %subtitle_default;
   }
 
   &__textarea {
-    width: 100%;
-    padding: .6rem .5rem;
-    border: .1rem solid $medium_gray;
-
-    &__error {
-      color: $danger;
-      margin-top: .5rem;
-    }
-
-    &--disabled {
-      opacity: .5;
-      cursor: not-allowed;
-    }
+    @extend %field_default;
 
     &--error {
-      border-color: $danger;
+      @extend %error_default;
     }
 
     &--warning {
-      border-color: $orange;
+      @extend %warning_default;
+    }
+
+    &--disabled {
+      @extend %disabled_default;
     }
 
     &:focus {
-      outline: none;
-      border-color: $blue_link;
+        @extend %focus_default;
     }
 
     &::placeholder {
       color: $dark_gray;
+    }
+
+    &__error {
+      @extend %invalid;
     }
   }
 }

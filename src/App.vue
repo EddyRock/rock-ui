@@ -14,14 +14,17 @@
         </div>
       </div>
 
-      <rock-text-area class="main__textarea" />
+      <rock-text-area
+        v-model="field"
+        class="main__textarea"
+      />
       <rock-input
         v-model="field"
         :subtitle="'asdasd'"
         class="main__input"
       />
 
-      <div class="main__inputs" v-if="false">
+      <div class="main__inputs" v-if="true">
         <h4 class="main__input-title">Small</h4>
         <rock-input v-model="field" class="main__input" small />
 
@@ -130,7 +133,7 @@ export default {
         class: 'violet',
       },
     ],
-    field: '',
+    field: 'asdasd',
   }),
 };
 </script>
@@ -146,6 +149,7 @@ export default {
     max-width: 91rem;
     margin: auto;
     background-color: $white;
+    min-height: 100vh;
   }
 
   &__colors {
