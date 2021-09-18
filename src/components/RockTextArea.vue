@@ -31,11 +31,57 @@
 </template>
 
 <script>
-import Events from '../mixins/Events.vue';
-
 export default {
   name: 'RockTextArea',
-  mixins: [Events],
+  props: {
+    subtitle: {
+      type: String,
+      default: '',
+    },
+    placeholder: {
+      type: String,
+      default: '',
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    error: {
+      type: String,
+      default: '',
+    },
+    warning: {
+      type: Boolean,
+      default: false,
+    },
+    value: {
+      type: String,
+      default: '',
+    },
+  },
+  data: () => ({
+    field: '',
+  }),
+
+  watch: {
+    value() {
+      this.field = this.value;
+    },
+  },
+
+  methods: {
+    onInput() {
+      this.$emit('input', this.field);
+    },
+
+    onChange() {
+      this.$emit('change', this.field);
+    },
+  },
+
+  created() {
+    this.field = this.value || '';
+  },
 };
 </script>
 

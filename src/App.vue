@@ -17,44 +17,14 @@
       <rock-text-area
         v-model="field"
         class="main__textarea"
+        subtitle="Text Area"
       />
+
       <rock-input
         v-model="field"
-        :subtitle="'asdasd'"
+        subtitle="Input"
         class="main__input"
       />
-
-      <div class="main__inputs" v-if="true">
-        <h4 class="main__input-title">Small</h4>
-        <rock-input v-model="field" class="main__input" small />
-
-        <h4 class="main__input-title">Medium</h4>
-        <rock-input v-model="field" class="main__input" medium />
-
-        <h4 class="main__input-title">Large</h4>
-        <rock-input v-model="field" class="main__input" large />
-
-        <h4 class="main__input-title">Warning</h4>
-        <rock-input v-model="field" class="main__input" warning />
-
-        <h4 class="main__input-title">Error</h4>
-        <rock-input v-model="field" class="main__input" error="Error" />
-
-        <h4 class="main__input-title">Subtitle</h4>
-        <rock-input v-model="field" class="main__input" subtitle="Subtitle" />
-
-        <h4 class="main__input-title">Placeholder</h4>
-        <rock-input v-model="field" class="main__input" placeholder="Placeholder" />
-
-        <h4 class="main__input-title">disabled</h4>
-        <rock-input v-model="field" class="main__input" disabled />
-
-        <h4 class="main__input-title">Password</h4>
-        <rock-input v-model="field" class="main__input" type="password" />
-
-        <h4 class="main__input-title">Tip</h4>
-        <rock-input v-model="field" class="main__input" tip="Tip" />
-      </div>
 
     </div>
   </div>
