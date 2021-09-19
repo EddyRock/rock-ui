@@ -1,6 +1,6 @@
 # Rock UI
 
-Rock UI is a lib of components based on vue.js, it is simple and easy to use;
+Rock UI is a lib of components based on vue.js, it's simple and easy to use;
 
 The lib is focused on facilitating the development of applications,
 it's easy to use, and easy to create new applications; First of all there isn't much design and
