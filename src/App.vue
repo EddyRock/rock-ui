@@ -26,6 +26,8 @@
         class="main__input"
       />
 
+      <rock-select class="main__select" />
+
     </div>
   </div>
 </template>
@@ -33,12 +35,14 @@
 <script>
 import RockInput from './components/RockInput.vue';
 import RockTextArea from './components/RockTextArea.vue';
+import RockSelect from './components/RockSelect.vue';
 
 export default {
   name: 'App',
   components: {
     RockInput,
     RockTextArea,
+    RockSelect,
   },
   data: () => ({
     colors: [
@@ -166,6 +170,11 @@ export default {
       padding: 0;
       font-weight: 700;
     }
+  }
+
+  &__select {
+    margin-top: 16px;
+    max-width: 250px;
   }
 
   &__color {
