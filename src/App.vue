@@ -26,7 +26,10 @@
         class="main__input"
       />
 
-      <rock-select class="main__select" />
+      <rock-select
+        class="main__select"
+        :items="colors"
+      />
 
     </div>
   </div>
