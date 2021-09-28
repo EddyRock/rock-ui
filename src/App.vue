@@ -26,7 +26,10 @@
         class="main__input"
       />
 
+      {{ fieldSelect }}
+
       <rock-select
+        v-model="fieldSelect"
         class="main__select"
         :items="colors"
       />
@@ -111,6 +114,12 @@ export default {
       },
     ],
     field: 'asdasd',
+    fieldSelect: {
+      title: 'Violet',
+      subtitle: 'Additional',
+      hex: '#996699',
+      class: 'violet',
+    },
   }),
 };
 </script>
