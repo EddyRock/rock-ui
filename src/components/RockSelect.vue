@@ -216,6 +216,7 @@ export default {
 
       &-value {
         color: $black;
+        font-size: .8rem;
       }
     }
 
@@ -241,7 +242,7 @@ export default {
         align-items: center;
         padding: .8rem .5rem;
         cursor: pointer;
-        min-height: 46px;
+        min-height: 2.8rem;
         &:hover {
           background: $light_gray;
         }

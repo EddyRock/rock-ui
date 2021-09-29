@@ -26,11 +26,10 @@
         class="main__input"
       />
 
-      {{ fieldSelect }}
-
       <rock-select
         v-model="fieldSelect"
         class="main__select"
+        subtitle="Select"
         :items="colors"
       />
 
