@@ -225,7 +225,7 @@ export default {
       height: 13rem;
       width: 100%;
       background: $white;
-      border: 0.06rem solid $medium_gray;
+      border: $border_weight solid $medium_gray;
       border-top: none;
       box-sizing: border-box;
       box-shadow: 0rem .2rem .7rem rgba(0, 0, 0, 0.08);
