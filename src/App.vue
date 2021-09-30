@@ -33,6 +33,10 @@
         :items="colors"
       />
 
+      <rock-checkbox
+        class="main__checbox"
+      />
+
     </div>
   </div>
 </template>
@@ -41,6 +45,7 @@
 import RockInput from './components/RockInput.vue';
 import RockTextArea from './components/RockTextArea.vue';
 import RockSelect from './components/RockSelect.vue';
+import RockCheckbox from './components/RockCheckbox.vue';
 
 export default {
   name: 'App',
@@ -48,6 +53,7 @@ export default {
     RockInput,
     RockTextArea,
     RockSelect,
+    RockCheckbox
   },
   data: () => ({
     colors: [
@@ -186,6 +192,11 @@ export default {
   &__select {
     margin-top: 16px;
     max-width: 250px;
+  }
+
+  &__checbox {
+    margin-top: 16px;
+    max-width: 280px;
   }
 
   &__color {

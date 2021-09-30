@@ -222,6 +222,7 @@ export default {
 
     &__dropdown {
       position: absolute;
+      z-index: 999;
       height: 13rem;
       width: 100%;
       background: $white;
