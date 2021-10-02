@@ -34,7 +34,9 @@
       />
 
       <rock-checkbox
+        v-model="fieldCheckbox"
         class="main__checbox"
+        title="Checkbox"
       />
 
     </div>
@@ -53,7 +55,7 @@ export default {
     RockInput,
     RockTextArea,
     RockSelect,
-    RockCheckbox
+    RockCheckbox,
   },
   data: () => ({
     colors: [
@@ -125,6 +127,7 @@ export default {
       hex: '#996699',
       class: 'violet',
     },
+    fieldCheckbox: false,
   }),
 };
 </script>
