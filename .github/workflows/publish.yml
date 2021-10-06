@@ -6,5 +6,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: npm install
+      - run: ls
+      - run: npm run build-bundle
       - run: npm publish
