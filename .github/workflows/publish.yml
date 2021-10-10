@@ -15,6 +15,6 @@ jobs:
           scope: '@eddy_rock_js'
       - run: npm i
       - run: npm run build-bundle
-      - run: npm publish
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
