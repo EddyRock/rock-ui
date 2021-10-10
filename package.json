@@ -1,6 +1,6 @@
 {
   "name": "@eddy_rock_js/rock-ui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "main" : ".dist/rock-ui.common.js",
   "repository": "git://github.com/EddyRock/rock-ui.git",
