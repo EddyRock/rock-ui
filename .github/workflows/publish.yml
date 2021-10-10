@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
-          scope: '@EddyRock'
+          scope: '@eddy_rock_js'
       - run: npm i
       - run: npm run build-bundle
       - run: npm publish
