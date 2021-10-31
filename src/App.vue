@@ -44,6 +44,12 @@
         class="main__paginator"
       />
 
+      <rock-radiobutton
+        v-model="radio"
+        class="main__radiobuttons"
+        :buttons="buttons"
+      />
+
     </div>
   </div>
 </template>
@@ -54,6 +60,7 @@ import RockTextArea from './components/RockTextArea.vue';
 import RockSelect from './components/RockSelect.vue';
 import RockCheckbox from './components/RockCheckbox.vue';
 import RockPaginator from './components/RockPaginator.vue';
+import RockRadiobutton from './components/RockRadiobutton.vue';
 
 export default {
   name: 'App',
@@ -63,6 +70,7 @@ export default {
     RockSelect,
     RockCheckbox,
     RockPaginator,
+    RockRadiobutton,
   },
   data: () => ({
     colors: [
@@ -136,6 +144,24 @@ export default {
     },
     fieldCheckbox: false,
     paginator: 1,
+    buttons: [
+      {
+        name: 'One',
+        value: 'one',
+        disabled: true,
+        active: true,
+      },
+      {
+        name: 'Two',
+        value: 'two',
+        disabled: false,
+      },
+      {
+        name: 'Three',
+        value: 'three',
+      },
+    ],
+    radio: null,
   }),
 };
 </script>
@@ -198,6 +224,10 @@ export default {
       padding: 0;
       font-weight: 700;
     }
+  }
+
+  &__radiobuttons {
+    margin-top: 25px;
   }
 
   &__select {
