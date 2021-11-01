@@ -50,6 +50,11 @@
         :buttons="buttons"
       />
 
+      <rock-tabs
+        :tabs="tabs"
+        class="main__tabs"
+      />
+
     </div>
   </div>
 </template>
@@ -61,6 +66,7 @@ import RockSelect from './components/RockSelect.vue';
 import RockCheckbox from './components/RockCheckbox.vue';
 import RockPaginator from './components/RockPaginator.vue';
 import RockRadiobutton from './components/RockRadiobutton.vue';
+import RockTabs from './components/RockTabs.vue';
 
 export default {
   name: 'App',
@@ -71,6 +77,7 @@ export default {
     RockCheckbox,
     RockPaginator,
     RockRadiobutton,
+    RockTabs,
   },
   data: () => ({
     colors: [
@@ -162,6 +169,26 @@ export default {
       },
     ],
     radio: null,
+    tabs: [
+      {
+        name: 'Tab',
+        value: 'tab 1',
+        disabled: true,
+        active: true,
+      },
+      {
+        name: 'Tab',
+        value: 'tab 2',
+      },
+      {
+        name: 'Tab asdasdsd',
+        value: 'tab 3',
+      },
+      {
+        name: 'Tab',
+        value: 'tab 4',
+      },
+    ],
   }),
 };
 </script>
@@ -178,6 +205,10 @@ export default {
     margin: auto;
     background-color: $white;
     min-height: 100vh;
+  }
+
+  &__tabs {
+    margin-top: 25px;
   }
 
   &__colors {
