@@ -55,6 +55,13 @@
         class="main__tabs"
       />
 
+      <rock-loader
+        class="main__loader"
+        line="0.4"
+        size="2"
+        speed="1.1"
+      />
+
     </div>
   </div>
 </template>
@@ -67,6 +74,7 @@ import RockCheckbox from './components/RockCheckbox.vue';
 import RockPaginator from './components/RockPaginator.vue';
 import RockRadiobutton from './components/RockRadiobutton.vue';
 import RockTabs from './components/RockTabs.vue';
+import RockLoader from './components/RockLoader.vue';
 
 export default {
   name: 'App',
@@ -78,6 +86,7 @@ export default {
     RockPaginator,
     RockRadiobutton,
     RockTabs,
+    RockLoader,
   },
   data: () => ({
     colors: [
@@ -269,6 +278,10 @@ export default {
   &__checbox {
     margin-top: 16px;
     max-width: 280px;
+  }
+
+  &__loader {
+    margin-top: 16px;
   }
 
   &__paginator {
