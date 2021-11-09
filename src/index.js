@@ -6,6 +6,7 @@ import RockTextArea from './components/RockTextArea.vue';
 import RockPaginator from './components/RockPaginator.vue';
 import RockRadiobutton from './components/RockRadiobutton.vue';
 import RockLoader from './components/RockLoader.vue';
+import RockLabel from './components/RockLabel.vue';
 
 const Componetns = {
   RockInput,
@@ -15,6 +16,7 @@ const Componetns = {
   RockPaginator,
   RockRadiobutton,
   RockLoader,
+  RockLabel,
 };
 
 Object.keys(Componetns).forEach((name) => {

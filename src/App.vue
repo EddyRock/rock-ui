@@ -62,6 +62,65 @@
         speed="1.1"
       />
 
+      <rock-label
+        class="main__label"
+        label="Label Primary"
+      />
+
+      <rock-label
+        class="main__label"
+        theme="dark-gray"
+        label="Label Primary"
+      />
+
+      <rock-label
+        class="main__label"
+        theme="medium-gray"
+        label="Label Primary"
+      />
+
+      <rock-label
+        class="main__label"
+        theme="light-gray"
+        label="Label Primary"
+      />
+
+      <rock-label
+        class="main__label"
+        theme="orange"
+        label="Label Primary"
+      />
+
+      <rock-label
+        class="main__label"
+        theme="success"
+        label="Label Primary"
+      />
+
+      <rock-label
+        class="main__label"
+        theme="blue-link"
+        label="Label Primary"
+      />
+
+      <rock-label
+        class="main__label"
+        theme="danger"
+        label="Label Primary"
+      />
+
+      <rock-label
+        class="main__label"
+        theme="yellow"
+        label="Label Primary"
+      />
+
+      <rock-label
+        class="main__label"
+        theme="violet"
+        label="Label Primary"
+      />
+
     </div>
   </div>
 </template>
@@ -75,6 +134,7 @@ import RockPaginator from './components/RockPaginator.vue';
 import RockRadiobutton from './components/RockRadiobutton.vue';
 import RockTabs from './components/RockTabs.vue';
 import RockLoader from './components/RockLoader.vue';
+import RockLabel from './components/RockLabel.vue';
 
 export default {
   name: 'App',
@@ -87,6 +147,7 @@ export default {
     RockRadiobutton,
     RockTabs,
     RockLoader,
+    RockLabel,
   },
   data: () => ({
     colors: [
@@ -273,6 +334,14 @@ export default {
   &__select {
     margin-top: 16px;
     max-width: 250px;
+  }
+
+  &__label {
+    margin-top: 16px;
+    margin-left: 4px;
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
   &__checbox {
