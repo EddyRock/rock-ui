@@ -121,6 +121,11 @@
         label="Label Primary"
       />
 
+      <rock-progressbar
+        class="main__progressbar"
+        v-model="value"
+      />
+
     </div>
   </div>
 </template>
@@ -135,6 +140,7 @@ import RockRadiobutton from './components/RockRadiobutton.vue';
 import RockTabs from './components/RockTabs.vue';
 import RockLoader from './components/RockLoader.vue';
 import RockLabel from './components/RockLabel.vue';
+import RockProgressbar from './components/RockProgressbar.vue';
 
 export default {
   name: 'App',
@@ -148,8 +154,10 @@ export default {
     RockTabs,
     RockLoader,
     RockLabel,
+    RockProgressbar,
   },
   data: () => ({
+    value: '12',
     colors: [
       {
         title: 'Black',
@@ -355,6 +363,10 @@ export default {
 
   &__paginator {
     margin-top: 16px !important;
+  }
+
+  &__progressbar {
+    margin-top: 16px;
   }
 
   &__color {
