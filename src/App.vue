@@ -64,38 +64,43 @@
 
       <rock-label
         class="main__label"
-        label="Label Primary"
-      />
+      >
+        Label Primary
+      </rock-label>
 
       <rock-label
         class="main__label"
         theme="dark-gray"
-        label="Label Primary"
-      />
+      >
+        Label Primary
+      </rock-label>
 
       <rock-label
         class="main__label"
-        theme="medium-gray"
-        label="Label Primary"
-      />
+      >
+        Label Primary
+      </rock-label>
 
       <rock-label
         class="main__label"
         theme="light-gray"
-        label="Label Primary"
-      />
+      >
+        Label Primary
+      </rock-label>
 
       <rock-label
         class="main__label"
         theme="orange"
-        label="Label Primary"
-      />
+      >
+        Label Primary
+      </rock-label>
 
       <rock-label
         class="main__label"
         theme="success"
-        label="Label Primary"
-      />
+      >
+        Label Primary
+      </rock-label>
 
       <rock-label
         class="main__label"
@@ -106,25 +111,56 @@
       <rock-label
         class="main__label"
         theme="danger"
-        label="Label Primary"
-      />
+      >
+        Label Primary
+      </rock-label>
 
       <rock-label
         class="main__label"
         theme="yellow"
-        label="Label Primary"
-      />
+      >
+        Label Primary
+      </rock-label>
 
       <rock-label
         class="main__label"
         theme="violet"
-        label="Label Primary"
-      />
+      >
+        Label Primary
+      </rock-label>
 
       <rock-progressbar
         class="main__progressbar"
         v-model="value"
       />
+
+      <rock-button
+        class="main__button"
+      >
+        Button
+      </rock-button>
+
+      <rock-button
+        class="main__button"
+        secondary
+      >
+        Button
+      </rock-button>
+
+      <rock-button
+        class="main__button"
+        disabled
+      >
+        Button
+      </rock-button>
+
+      <rock-button
+        class="main__button"
+        secondary
+        disabled
+      >
+        Button
+      </rock-button>
 
     </div>
   </div>
@@ -141,6 +177,7 @@ import RockTabs from './components/RockTabs.vue';
 import RockLoader from './components/RockLoader.vue';
 import RockLabel from './components/RockLabel.vue';
 import RockProgressbar from './components/RockProgressbar.vue';
+import RockButton from './components/RockButton.vue';
 
 export default {
   name: 'App',
@@ -155,6 +192,7 @@ export default {
     RockLoader,
     RockLabel,
     RockProgressbar,
+    RockButton,
   },
   data: () => ({
     value: '12',
@@ -350,6 +388,11 @@ export default {
     &:first-child {
       margin-left: 0;
     }
+  }
+
+  &__button {
+    margin-top: 16px;
+    margin-left: 4px;
   }
 
   &__checbox {

@@ -13,7 +13,7 @@
       'rock-label--violet': theme === 'violet',
     }"
   >
-    {{ label }}
+    <slot />
   </div>
 </template>
 
@@ -24,10 +24,6 @@ export default {
     theme: {
       type: String,
       default: 'black',
-    },
-    label: {
-      type: String,
-      default: '',
     },
   },
 };
