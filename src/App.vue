@@ -162,6 +162,15 @@
         Button
       </rock-button>
 
+      <br>
+
+      <rock-icon-button class="main__button">
+        <img src="./assets/icons/arrow.svg">
+      </rock-icon-button>
+
+      <rock-icon-button disabled class="main__button">
+        <img src="./assets/icons/arrow.svg">
+      </rock-icon-button>
     </div>
   </div>
 </template>
@@ -178,6 +187,7 @@ import RockLoader from './components/RockLoader.vue';
 import RockLabel from './components/RockLabel.vue';
 import RockProgressbar from './components/RockProgressbar.vue';
 import RockButton from './components/RockButton.vue';
+import RockIconButton from './components/RockIconButton.vue';
 
 export default {
   name: 'App',
@@ -193,6 +203,7 @@ export default {
     RockLabel,
     RockProgressbar,
     RockButton,
+    RockIconButton
   },
   data: () => ({
     value: '12',
