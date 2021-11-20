@@ -9,6 +9,7 @@ import RockLoader from './components/RockLoader.vue';
 import RockLabel from './components/RockLabel.vue';
 import RockProgressbar from './components/RockProgressbar.vue';
 import RockButton from './components/RockButton.vue';
+import RockIconButton from './components/RockIconButton.vue';
 
 const Componetns = {
   RockInput,
@@ -21,6 +22,7 @@ const Componetns = {
   RockLabel,
   RockProgressbar,
   RockButton,
+  RockIconButton,
 };
 
 Object.keys(Componetns).forEach((name) => {
