@@ -5,7 +5,11 @@
   "main": ".dist/rock-ui.common.js",
   "repository": "git://github.com/EddyRock/rock-ui.git",
   "files": [
-    "dist/*"
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
