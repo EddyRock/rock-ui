@@ -1,8 +1,17 @@
 const path = require('path');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = {
   lintOnSave: false,
   configureWebpack: {
+    plugins: [
+      new CircularDependencyPlugin({
+        exclude: /a\.js|node_modules/,
+        failOnError: true,
+        allowAsyncCycles: false,
+        cwd: process.cwd(),
+      }),
+    ],
     resolve: {
       alias: {
         '@Components': path.resolve(__dirname, 'src/components'),
@@ -33,5 +42,5 @@ module.exports = {
       },
     },
     extract: false,
-  },
+  }
 };
