@@ -106,7 +106,9 @@
         class="main__label"
         theme="blue-link"
         label="Label Primary"
-      />
+      >
+        Label Primary
+      </rock-label>
 
       <rock-label
         class="main__label"
