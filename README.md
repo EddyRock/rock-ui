@@ -1,5 +1,3 @@
-![alt text for screen readers](https://pasteboard.co/2VNrnV4WhcPj.png "RippleUI Logo")
-
 <h1 align="center">Rock UI</h1>
 
 <a href="https://www.npmjs.com/package/@eddy_rock_js/rock-ui">
