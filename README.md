@@ -35,20 +35,6 @@ To use a component, simply import component in vue component and use it.
 ## 🎨 Components
 Here is a list of all of the components that are currently available in RockUI.
 
-- Input
-- Checkbox
-- Select
-- Textarea 
-- Paginator
-- Radio
-- Loader
-- Label
-- Progress bar
-- Button
-- Icon
-
-## 📓Documentation
-
 ### RockInput
 ```vue
 <rock-input
